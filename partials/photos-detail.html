@@ -1,0 +1,25 @@
+<a ui-sref="content.photos.list" style="margin-left: 15px;">
+    <i class="fa fa-arrow-circle-left fa-2x"></i>
+</a>
+
+<div ng-init="ctrPhotoDetail.init()">
+    <img class="img-responsive img-rounded" ng-src="../assets/image/{{ctrPhotoDetail.photo.imageName}}" style="margin:auto; width: 60%;">
+    <div class="well well-sm" style="margin:auto; width: 60%; margin-top: 15px;">
+        <div class="well well-sm pull-right" style="width: 110px;">
+            <i>Views <span class="badge"> {{ ctrPhotoDetail.viewObj.views }} </span></i>
+        </div>
+
+        <div class="well well-sm pull-right" style="width: 110px;">
+            <i>Viewing <span class="badge"> {{ ctrPhotoDetail.viewObj.viewing }} </span></i>
+        </div>
+
+        <h4>{{ctrPhotoDetail.photo.title}}</h4>
+        <p>{{ctrPhotoDetail.photo.description}}</p>
+    </div>
+
+    <div style="margin:auto; width: 80%; margin-bottom: 15px;">
+        <button style="margin-top: 10px; width:100%;" class="btn btn-default" ui-sref=".comment({skip:0, limit:2})">Comments</button>
+    </div>
+</div>
+
+<div ui-view class="slide-top"></div>
