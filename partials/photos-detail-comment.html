@@ -1,0 +1,14 @@
+<div ng-init="ctrPhotoComment.init()" style="margin-top:15px;">
+    <div ng-repeat="comment in ctrPhotoComment.comments" class="well well-sm" style="margin: auto; width: 60%;">
+        <div class="media">
+            <div class="media-left media-middle">
+                <a href="">
+                    <img class="img-circle" style="width:60px;" src="../assets/image/{{comment.imageName}}" alt="">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">{{comment.name}}</h4> {{comment.comment}}
+            </div>
+        </div>
+    </div>
+</div>
