@@ -2,7 +2,10 @@ var photosGallery = angular.module('photosGallery', ['ui.router', 'ngAnimate'])
     .config(function ($stateProvider, $urlRouterProvider, $urlMatcherFactoryProvider, $locationProvider) {
         //URL case insensitive
         $urlMatcherFactoryProvider.caseInsensitive(true);
-
+        
+        //urlRouterProvider for git-pages
+        $urlRouterProvider.when("", "/home");
+        $urlRouterProvider.when("/", "/home");
         //remove the "#" from URL
         $locationProvider.html5Mode(true);
 
